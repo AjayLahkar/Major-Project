@@ -6,12 +6,13 @@
             <h2>Create a New Listing</h2>
             <br>
 
-            <form action="/listings" method="POST" novalidate class="needs-validation" enctype="multipart/form-data">
+            <form action="/listings" method="POST" novalidate class="needs-validation" 
+                enctype="multipart/form-data">
 
                 <div class="mb-3">
                     <label for="title" class="form-label">Title : </label>
-                    <input placeholder="Add a Catchy Title" name="listing[title]" type="text" class="form-control"
-                        required>
+                    <input placeholder="Add a Catchy Title" name="listing[title]" type="text" 
+                        class="form-control" required>
 
                     <div class="valid-feedback">Title Looks good!</div>
                     <div class="invalid-feedback">Title is Compulsory!</div>
@@ -20,8 +21,8 @@
 
                 <div class="mb-3">
                     <label for="description" class="form-label">Description : </label>
-                    <textarea placeholder="Enter Description" name="listing[description]" class="form-control"
-                        required></textarea>
+                    <textarea placeholder="Enter Description" name="listing[description]" 
+                        class="form-control" required></textarea>
 
                     <div class="valid-feedback">Thanks! for giving description
                         about your listing.</div>
@@ -31,14 +32,42 @@
                 </div>
 
                 <div class="mb-3">
+                    <label for="Category" class="form-label">Category : </label>
+                    <select class="form-select" name="listing[category]" required>
+                        <option disabled>Choose Your Listing Category</option>
+                        <option value="Trending">Trending</option>
+                        <option value="Rooms">Rooms</option>
+                        <option value="Top Cities">Top Cities</option>
+                        <option value="Mountains">Mountains</option>
+                        <option value="Castles">Castles</option>
+                        <option value="Amazing Pools">Amazing Pools</option>
+                        <option value="Camping">Camping</option>
+                        <option value="Farms">Farms</option>
+                        <option value="Arctic">Arctic</option>
+                        <option value="Domes">Domes</option>
+                        <option value="Boats">Boats</option>
+                    </select>
+
+                    <div class="valid-feedback">
+                        Good Category
+                    </div>
+                    <div class="invalid-feedback">
+                        Please Enter Category of your listing!
+                    </div>
+
+                </div>
+
+                <div class="mb-3">
                     <label for="image" class="form-label">Upload Listing Image : </label>
-                    <input name="listing[image]" type="file" class="form-control" required>
+                    <input name="listing[image]" type="file" 
+                        class="form-control" required>
                 </div>
 
                 <div class="row">
                     <div class="col-md-4 mb-3">
                         <label for="price" class="form-label">Price : </label>
-                        <input placeholder="1200" name="listing[price]" type="number" class="form-control" required>
+                        <input placeholder="1200" name="listing[price]" 
+                            type="number" class="form-control" required>
 
                         <div class="valid-feedback">Very good price!</div>
                         <div class="invalid-feedback">Please enter valid price!</div>
@@ -47,18 +76,21 @@
 
                     <div class="col-md-8 mb-3">
                         <label for="country" class="form-label">Country : </label>
-                        <input placeholder="India" name="listing[country]" type="text" class="form-control" required>
+                        <input placeholder="India" name="listing[country]" 
+                            type="text" class="form-control" required>
 
                         <div class="valid-feedback">That's good!</div>
-                        <div class="invalid-feedback">Please enter your country name!</div>
+                        <div class="invalid-feedback">
+                            Please enter your country name!
+                        </div>
 
                     </div>
                 </div>
 
                 <div class="mb-3">
                     <label for="location" class="form-label">Location : </label>
-                    <input placeholder="Ranchi, Jharkhand" name="listing[location]" type="text" class="form-control"
-                        required>
+                    <input placeholder="Ranchi, Jharkhand" name="listing[location]" 
+                    type="text" class="form-control" required>
 
                     <div class="valid-feedback">Good!</div>
                     <div class="invalid-feedback">Please enter your location!</div>

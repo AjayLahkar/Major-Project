@@ -30,6 +30,33 @@
                 </div>
 
                 <div class="mb-3">
+                    <label for="Category" class="form-label">Category : </label>
+                    <select class="form-select" name="listing[category]" required>
+                        <option><%= listing.category %></option>
+                        <option disabled>Choose Your Listing Category</option>
+                        <option value="Trending">Trending</option>
+                        <option value="Rooms">Rooms</option>
+                        <option value="Top Cities">Top Cities</option>
+                        <option value="Mountains">Mountains</option>
+                        <option value="Castles">Castles</option>
+                        <option value="Amazing Pools">Amazing Pools</option>
+                        <option value="Camping">Camping</option>
+                        <option value="Farms">Farms</option>
+                        <option value="Arctic">Arctic</option>
+                        <option value="Domes">Domes</option>
+                        <option value="Boats">Boats</option>
+                    </select>
+
+                    <div class="valid-feedback">
+                        Good Category
+                    </div>
+                    <div class="invalid-feedback">
+                        Please Enter Category of your listing!
+                    </div>
+
+                </div>
+
+                <div class="mb-3">
                     Original Listing Image :
                     <br>
                     <img src="<%= originalImageUrl %>" alt="listing[image]" />

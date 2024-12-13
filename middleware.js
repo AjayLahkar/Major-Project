@@ -42,6 +42,20 @@ module.exports.validateListing = (req, res, next) => {
     }
 };
 
+/* Samajh Nahi aa Raha Isko Try & Check Kar Rahe the.
+module.exports.filterCity = (wrapAsync(async (req, res) => {
+    const { city } = req.query;
+
+    let filter = {};
+    if(city){
+        filter.city = city;
+    }
+
+    const allListings = await Listing.find(filter);
+    res.render("listings/index.ejs", { allListings, city });
+}));
+*/
+
 module.exports.validateReview = (req, res, next) => {
     let { error } = reviewSchema.validate(req.body);
     if( error ) {

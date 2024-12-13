@@ -35,7 +35,6 @@ module.exports.createListing = async (req, res, next) => {
 
     // console.log(response.body.features[0].geometry);
 
-    
     let url = req.file.path;
     let filename = req.file.filename;
     // console.log(url, "...", filename);
@@ -47,7 +46,7 @@ module.exports.createListing = async (req, res, next) => {
     newListing.geometry = response.body.features[0].geometry;
 
     let savedListing = await newListing.save();
-    console.log(savedListing);
+    console.log("Saved listing is :- ", savedListing);
     req.flash("success", "New Listing Created..!");
     res.redirect("/listings");
 };

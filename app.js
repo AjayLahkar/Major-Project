@@ -90,6 +90,23 @@ app.use("/listings", listingRouter);
 app.use("/listings/:id/reviews", reviewRouter);
 app.use("/", userRouter);
 
+/*
+//  Filters
+
+module.exports.filter = async(req, res) => {
+    let { value } = req.params;
+    let data = await Listing.find({
+        category : value,
+    }).populate({
+        path : "reviews",
+        populate : {
+            path : "author",
+        },
+    }).populate("owner");
+    res.render("listings/index.ejs", {data} );
+};
+*/
+
 app.all("*", (req, res, next) => {
     next(new ExpressError(404, "Page Not Found!"));
 });
